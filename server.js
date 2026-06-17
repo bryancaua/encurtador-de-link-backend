@@ -37,7 +37,7 @@ app.post('/encurtar', (req, res) => {
 
   db.prepare('INSERT INTO links (codigo, url_original) VALUES (?, ?)').run(codigo, url)
 
-  res.json({ linkCurto: `http://localhost:3000/${codigo}` })
+  res.json({ linkCurto: `https://encurtador-de-link-backend.onrender.com${codigo}` })
 })
 
 app.get('/:codigo', (req, res) => {
